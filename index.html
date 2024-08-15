@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Finance Tracker</h1>
+        <form id="transaction-form">
+            <div class="input-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" required>
+            </div>
+            <div class="input-group">
+                <label for="category">Category</label>
+                <input type="text" id="category" placeholder="e.g. Salary, Groceries" required>
+            </div>
+            <div class="input-group">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" placeholder="e.g. 100, -50" required>
+            </div>
+            <div class="input-group">
+                <label for="description">Description</label>
+                <input type="text" id="description" placeholder="e.g. Monthly Salary, Grocery Shopping" required>
+            </div>
+            <button type="submit">Add Transaction</button>
+        </form>
+
+        <h2>Transactions</h2>
+        <table id="transaction-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Transactions will be added here -->
+            </tbody>
+        </table>
+
+        <div class="summary">
+            <h2>Summary</h2>
+            <p>Total Income: <span id="total-income">0</span></p>
+            <p>Total Expenses: <span id="total-expenses">0</span></p>
+            <p>Net Balance: <span id="net-balance">0</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
